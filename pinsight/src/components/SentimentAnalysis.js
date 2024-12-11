@@ -114,7 +114,7 @@ const SentimentAnalysis = () => {
         if (accessToken && pinIdFromUrl) {
             // Send the accessToken and pinId to the backend
             axios.post(
-                'http://localhost:5000/sentiment-analysis', // Make sure the backend URL is correct
+                'https://face-sight.uc.r.appspot.com/sentiment-analysis', // Make sure the backend URL is correct
                 { pinId: pinIdFromUrl }, // Pass the pinId in the body
                 { headers: { Authorization: `Bearer ${accessToken}` } }
             )

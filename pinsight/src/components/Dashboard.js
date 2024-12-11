@@ -137,7 +137,7 @@ const Dashboard = () => {
                 // Prevent multiple calls
                 if (hasFetched) return;
 
-                const response = await axios.get("https://pinsight-backend-467347019902.us-central1.run.app/fetch-pins", {
+                const response = await axios.get("https://face-sight.uc.r.appspot.com/fetch-pins", {
                     headers: {
                         Authorization: `Bearer ${accessToken}`,
                     },
