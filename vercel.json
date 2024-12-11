@@ -1,0 +1,23 @@
+{
+	"builds": [
+	  {
+		"src": "pinsight/package.json",
+		"use": "@vercel/static-build",
+		"config": { "distDir": "pinsight/build" }
+	  },
+	  {
+		"src": "backend/**/*.js",
+		"use": "@vercel/node"
+	  }
+	],
+	"routes": [
+	  {
+		"src": "/api/(.*)",
+		"dest": "backend/$1"
+	  },
+	  {
+		"src": "/(.*)",
+		"dest": "pinsight/$1"
+	  }
+	]
+  }

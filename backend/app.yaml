@@ -1,0 +1,11 @@
+runtime: nodejs18
+env: standard
+
+handlers:
+  # Serve static files from the build folder
+  - url: /static
+    static_dir: build/static
+
+  # Serve the main React app (index.html) for all other routes
+  - url: /.*
+    script: auto
